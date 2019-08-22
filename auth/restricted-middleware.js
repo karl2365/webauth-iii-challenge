@@ -13,7 +13,7 @@ module.exports = (req, res, next) => {
         res.status(401).json({ you: 'shall not pass!' });
       } else {
         // token is goooooooood
-        req.user = { username: decodedToken.username };
+        req.user = { username: decodedToken.username, department: decodedToken.department };
         next();
       }
     });

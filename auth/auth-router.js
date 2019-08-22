@@ -47,7 +47,7 @@ function getJwt(user) {
     // subject is normally the user's id (who/what the token describes)
     subject: user.id, // translates unto the "sub" property on the token
     username: user.username,
-    jwtid: 1,
+    department: user.department,
   };
   const options = {
     expiresIn: '8h',
